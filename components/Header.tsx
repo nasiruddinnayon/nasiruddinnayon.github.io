@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
         }`}
       >
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-          <Link to="/" className="group flex items-center gap-3 relative z-50">
+          <Link to="/" className="group flex items-center gap-3 relative z-50 flex-shrink-0">
             <div className={`w-8 h-8 md:w-10 md:h-10 border-2 rounded-full flex items-center justify-center transition-colors duration-300 overflow-hidden ${showBackground ? 'border-lawyer-green' : 'border-lawyer-green bg-paper-50'}`}>
                <img 
                  src={iconImg}
@@ -62,8 +62,18 @@ export const Header: React.FC = () => {
             </div>
           </Link>
 
+          {/* Hotline Section - Added per request */}
+          <div className={`hidden md:flex flex-col items-start ml-8 mr-auto transition-opacity duration-300 ${showBackground ? 'opacity-100' : 'opacity-90'}`}>
+             <span className={`text-[10px] uppercase tracking-[0.2em] font-bold ${showBackground ? 'text-lawyer-darkGreen/60' : 'text-lawyer-darkGreen/70'}`}>
+               Hotline
+             </span>
+             <a href="tel:+8801711000000" className="text-sm lg:text-base font-serif font-bold text-gold-600 hover:text-lawyer-green transition-colors leading-none mt-0.5">
+               +880 1711-000000
+             </a>
+          </div>
+
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex space-x-8 xl:space-x-10">
+          <nav className="hidden lg:flex space-x-6 xl:space-x-8">
             {links.map((link) => (
               <Link
                 key={link.label}
@@ -120,8 +130,8 @@ export const Header: React.FC = () => {
 
           <div className="mt-auto">
             <h4 className="text-gold-600 font-bold uppercase tracking-widest text-xs mb-4">Contact</h4>
-            <p className="text-lawyer-darkGreen text-sm mb-2">+880 1712-413731</p>
-            <p className="text-lawyer-darkGreen text-sm">mail2nasir@gmail.com</p>
+            <p className="text-lawyer-darkGreen text-sm mb-2">+880 1711-000000</p>
+            <p className="text-lawyer-darkGreen text-sm">nasir@taxheavenvalley.com</p>
           </div>
         </div>
       </div>

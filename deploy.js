@@ -47,8 +47,8 @@ try {
   execSync('git add -A');
 
   try {
-    execSync('git config user.name "Deploy Bot"');
-    execSync('git config user.email "deploy@taxheaven.com"');
+    execSync('git config user.name "Nasir Uddin"');
+    execSync('git config user.email "nsi.nasir87@gmail.com"');
   } catch (e) {}
   
   execSync('git commit -m "Deploy to GitHub Pages"');
